@@ -1,0 +1,80 @@
+2023-01-17 15:55:48 [[32minfo[39m] [[36mShard[39m] Launching Shard 0
+2023-01-17 15:56:56 [[32minfo[39m] [[36mShard[39m] Launching Shard 0
+2023-01-17 15:57:18 [[32minfo[39m] [[36mCommands[39m] Commands Loaded
+2023-01-17 15:57:18 [[32minfo[39m] [[36mClient Events[39m] Client Events Loaded
+2023-01-17 15:57:18 [[32minfo[39m] [[36mDistube events[39m] Distube Events Loaded
+2023-01-17 15:57:20 [[31merror[39m] [[36mShard Disconnect[39m] [Tue Jan 17 2023 15:57:20] || ==> || Shard #0 Disconnected
+2023-01-17 15:57:20 [[31merror[39m] [[36mAnti Crash Module[39m] Unhandled Rejection, ({"code":"DisallowedIntents"})
+2023-01-17 15:57:25 [[32minfo[39m] [[36mShard Reconnecting[39m] [Tue Jan 17 2023 15:57:25] || ==> || Shard #0 Reconnecting
+2023-01-17 15:59:12 [[32minfo[39m] [[36mShard[39m] Launching Shard 0
+2023-01-17 15:59:29 [[32minfo[39m] [[36mReady[39m] Jup Music is now ready
+2023-01-17 15:59:29 [[32minfo[39m] [[36mStatcord Api[39m] Started autopost
+2023-01-17 15:59:29 [[31merror[39m] [[36mAnti Crash Module[39m] Unhandled Rejection, ({})
+2023-01-17 15:59:30 [[32minfo[39m] [[36mSlash Commands[39m] 2 slashCommands (With 22 Subcommands) Loaded for all: All possible Guilds
+2023-01-17 15:59:30 [[32minfo[39m] [[36mCommands[39m] Commands Loaded
+2023-01-17 15:59:31 [[32minfo[39m] [[36mClient Events[39m] Client Events Loaded
+2023-01-17 15:59:31 [[32minfo[39m] [[36mDistube events[39m] Distube Events Loaded
+2023-01-17 15:59:31 [[32minfo[39m] [[36mShard Ready[39m] [Tue Jan 17 2023 15:59:31] || ==> || Shard #0 Ready
+2023-01-17 16:00:24 [[32minfo[39m] [[36mHelp Command[39m] [COMMAND] Help used by $Tol$n#7564 from El servidor de $Tol$n
+2023-01-17 16:49:02 [[32minfo[39m] [[36mShard[39m] Launching Shard 0
+2023-01-17 16:49:20 [[32minfo[39m] [[36mCommands[39m] Commands Loaded
+2023-01-17 16:49:20 [[32minfo[39m] [[36mClient Events[39m] Client Events Loaded
+2023-01-17 16:49:20 [[32minfo[39m] [[36mDistube events[39m] Distube Events Loaded
+2023-01-17 16:49:21 [[32minfo[39m] [[36mReady[39m] Jup Music is now ready
+2023-01-17 16:49:21 [[32minfo[39m] [[36mStatcord Api[39m] Started autopost
+2023-01-17 16:49:22 [[32minfo[39m] [[36mSlash Commands[39m] 2 slashCommands (With 22 Subcommands) Loaded for all: All possible Guilds
+2023-01-17 16:49:26 [[32minfo[39m] [[36mDashboard[39m] Dashboard launched on port 80
+2023-01-17 16:49:26 [[32minfo[39m] [[36mShard Ready[39m] [Tue Jan 17 2023 16:49:26] || ==> || Shard #0 Ready
+2023-01-17 16:52:19 [[32minfo[39m] [[36mundefined[39m] [COMMAND] Help usado por $Tol$n#7564 from El servidor de $Tol$n
+2023-01-17 17:33:46 [[32minfo[39m] [[36mShard[39m] Launching Shard 0
+2023-01-17 17:34:02 [[32minfo[39m] [[36mReady[39m] Jup Music is now ready
+2023-01-17 17:34:02 [[32minfo[39m] [[36mStatcord Api[39m] Started autopost
+2023-01-17 17:34:02 [[32minfo[39m] [[36mCommands[39m] Commands Loaded
+2023-01-17 17:34:03 [[32minfo[39m] [[36mSlash Commands[39m] 2 slashCommands (With 22 Subcommands) Loaded for all: All possible Guilds
+2023-01-17 17:34:04 [[32minfo[39m] [[36mDashboard[39m] Dashboard launched on port 80
+2023-01-17 17:34:04 [[32minfo[39m] [[36mClient Events[39m] Client Events Loaded
+2023-01-17 17:34:04 [[32minfo[39m] [[36mDistube events[39m] Distube Events Loaded
+2023-01-17 17:34:04 [[32minfo[39m] [[36mShard Ready[39m] [Tue Jan 17 2023 17:34:04] || ==> || Shard #0 Ready
+2023-01-17 17:38:02 [[32minfo[39m] [[36mShard[39m] Launching Shard 0
+2023-01-17 17:39:08 [[32minfo[39m] [[36mShard[39m] Launching Shard 0
+2023-01-17 17:39:23 [[32minfo[39m] [[36mCommands[39m] Commands Loaded
+2023-01-17 17:39:23 [[32minfo[39m] [[36mClient Events[39m] Client Events Loaded
+2023-01-17 17:39:23 [[32minfo[39m] [[36mDistube events[39m] Distube Events Loaded
+2023-01-17 17:39:24 [[32minfo[39m] [[36mStatcord Api[39m] Started autopost
+2023-01-17 17:39:24 [[32minfo[39m] [[36mReady[39m] Jup Music is now ready
+2023-01-17 17:39:25 [[32minfo[39m] [[36mSlash Commands[39m] 2 slashCommands (With 22 Subcommands) Loaded for all: All possible Guilds
+2023-01-17 17:39:30 [[32minfo[39m] [[36mDashboard[39m] Dashboard launched on port 80
+2023-01-17 17:39:30 [[32minfo[39m] [[36mShard Ready[39m] [Tue Jan 17 2023 17:39:30] || ==> || Shard #0 Ready
+2023-01-17 17:43:25 [[31merror[39m] [[36mAnti Crash Module[39m] Unhandled Rejection, ({"name":"EnmapPathError","message":"The key \"1064700931096199178\" does not exist in the enmap \"settings\""})
+2023-01-17 17:44:40 [[31merror[39m] [[36mAnti Crash Module[39m] Unhandled Rejection, ({"name":"EnmapPathError","message":"The key \"1064700931096199178\" does not exist in the enmap \"settings\""})
+2023-01-17 17:46:30 [[31merror[39m] [[36minteractionCreate[39m] Algo salió mal al ejecutar un comando **[TypeError: Cannot read properties of undefined (reading 'join')]**
+2023-01-17 17:50:26 [[31merror[39m] [[36mStatcord Api[39m] Error posting bot stats [Error: You have hit a ratelimit.]
+2023-01-17 17:51:34 [[32minfo[39m] [[36mundefined[39m] [COMMAND] Help usado por $Tol$n#7564 from El servidor de $Tol$n
+2023-01-17 17:52:08 [[32minfo[39m] [[36mundefined[39m] [COMMAND] Help usado por $Tol$n#7564 from El servidor de $Tol$n
+2023-01-17 19:25:12 [[32minfo[39m] [[36mShard[39m] Launching Shard 0
+2023-01-17 19:25:39 [[32minfo[39m] [[36mCommands[39m] Commands Loaded
+2023-01-17 19:25:41 [[32minfo[39m] [[36mClient Events[39m] Client Events Loaded
+2023-01-17 19:25:41 [[32minfo[39m] [[36mDistube events[39m] Distube Events Loaded
+2023-01-17 19:25:43 [[32minfo[39m] [[36mReady[39m] Jup Music is now ready
+2023-01-17 19:25:43 [[32minfo[39m] [[36mStatcord Api[39m] Started autopost
+2023-01-17 19:25:44 [[32minfo[39m] [[36mSlash Commands[39m] 2 slashCommands (With 22 Subcommands) Loaded for all: All possible Guilds
+2023-01-17 19:25:50 [[32minfo[39m] [[36mDashboard[39m] Dashboard launched on port 80
+2023-01-17 19:25:51 [[32minfo[39m] [[36mShard Ready[39m] [Tue Jan 17 2023 19:25:51] || ==> || Shard #0 Ready
+2023-01-17 19:43:32 [[32minfo[39m] [[36mShard[39m] Launching Shard 0
+2023-01-17 19:43:45 [[32minfo[39m] [[36mReady[39m] Jup Music is now ready
+2023-01-17 19:43:45 [[32minfo[39m] [[36mStatcord Api[39m] Started autopost
+2023-01-17 19:43:45 [[32minfo[39m] [[36mSlash Commands[39m] 2 slashCommands (With 22 Subcommands) Loaded for all: All possible Guilds
+2023-01-17 19:43:47 [[32minfo[39m] [[36mDashboard[39m] Dashboard launched on port 80
+2023-01-17 19:43:47 [[32minfo[39m] [[36mCommands[39m] Commands Loaded
+2023-01-17 19:43:47 [[32minfo[39m] [[36mClient Events[39m] Client Events Loaded
+2023-01-17 19:43:47 [[32minfo[39m] [[36mDistube events[39m] Distube Events Loaded
+2023-01-17 19:43:47 [[32minfo[39m] [[36mShard Ready[39m] [Tue Jan 17 2023 19:43:47] || ==> || Shard #0 Ready
+2023-01-17 20:16:55 [[32minfo[39m] [[36mShard[39m] Launching Shard 0
+2023-01-17 20:17:07 [[32minfo[39m] [[36mReady[39m] Jup Music is now ready
+2023-01-17 20:17:07 [[32minfo[39m] [[36mStatcord Api[39m] Started autopost
+2023-01-17 20:17:07 [[32minfo[39m] [[36mSlash Commands[39m] 2 slashCommands (With 22 Subcommands) Loaded for all: All possible Guilds
+2023-01-17 20:17:09 [[32minfo[39m] [[36mDashboard[39m] Dashboard launched on port 80
+2023-01-17 20:17:09 [[32minfo[39m] [[36mCommands[39m] Commands Loaded
+2023-01-17 20:17:09 [[32minfo[39m] [[36mClient Events[39m] Client Events Loaded
+2023-01-17 20:17:09 [[32minfo[39m] [[36mDistube events[39m] Distube Events Loaded
+2023-01-17 20:17:09 [[32minfo[39m] [[36mShard Ready[39m] [Tue Jan 17 2023 20:17:09] || ==> || Shard #0 Ready

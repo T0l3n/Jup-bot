@@ -1,0 +1,129 @@
+const { onCoolDown, databasing, check_if_dj } = require("../../structures/functions");
+const { EmbedBuilder, PermissionsBitField } = require("discord.js");
+
+module.exports = async (client, interaction) => {
+    const CategoryName = interaction.commandName;
+    databasing(client, interaction.guild.id);
+    const queue = client.distube.getQueue(interaction);
+
+    let command = false;
+    try {
+        if (client.slashCommands.has(CategoryName + interaction.options.getSubcommand())) {
+            command = client.slashCommands.get(CategoryName + interaction.options.getSubcommand());
+        }
+    } catch {
+        if (client.slashCommands.has("normal" + CategoryName)) {
+            command = client.slashCommands.get("normal" + CategoryName);
+        }
+    }
+
+    let memberChannel = interaction.member.voice.channel;
+    let botChannel = interaction.guild.members.me.voice.channel;
+
+    if (command) {
+        let botchannels = client.settings.get(interaction.guildId, `botchannel`);
+        if (!botchannels || !Array.isArray(botchannels)) botchannels = [];
+        if (botchannels.length > 0) {
+            if (!botchannels.includes(interaction.channelId) && !interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
+                return interaction.reply({
+                    ephemeral: true,
+                    embeds: [new EmbedBuilder()
+                        .setColor(client.config.embed.color)
+                        .setFooter({ text: client.config.embed.footer_text, iconURL: client.config.embed.footer_icon })
+                        .setTitle(`No se le permite usar este Comando aquí!`)
+                        .setDescription(`Por favor hazlo en uno de esos:\n> ${botchannels.map(c => `<#${c}>`).join(", ")}`)
+                    ]
+                })
+            }
+        }
+
+        if (command.checkers.vc && !memberChannel) {
+            return interaction.reply({
+                ephemeral: true,
+                embeds: [
+                    new EmbedBuilder()
+                        .setColor(client.config.embed.color)
+                        .setTitle(`Únase primero a un canal de voz!`)
+                        .setFooter({ text: client.config.embed.footer_text, iconURL: client.config.embed.footer_icon })
+                ],
+            })
+        }
+
+        if (command.checkers.queue && !queue) {
+            return interaction.reply({
+                ephemeral: true,
+                embeds: [new EmbedBuilder()
+                    .setDescription("There is nothing in the queue right now!")
+                    .setColor(client.config.embed.color)
+                    .setFooter({ text: client.config.embed.footer_text, iconURL: client.config.embed.footer_icon })]
+            })
+        }
+
+        if (queue) {
+
+            if (command.checkers.sVc && memberChannel.id !== botChannel.id) {
+                return interaction.reply({
+                    ephemeral: true,
+                    embeds: [new EmbedBuilder()
+                        .setDescription("You need to be in a same/voice channel.")
+                        .setColor(client.config.embed.color)
+                        .setFooter({ text: client.config.embed.footer_text, iconURL: client.config.embed.footer_icon })]
+                })
+            }
+
+            if (command.checkers.dj && queue && check_if_dj(client, interaction.member, queue.songs[0])) {
+                return interaction.reply({
+                    ephemeral: true,
+                    embeds: [new EmbedBuilder()
+                        .setDescription(`Necesita tener el rol de dj para usar este comando, (${check_if_dj(client, interaction.member, queue.songs[0])})`)
+                        .setColor(client.config.embed.color)
+                        .setFooter({ text: client.config.embed.footer_text, iconURL: client.config.embed.footer_icon })]
+                })
+            }
+
+            if (!interaction.guild.members.me.permissionsIn(memberChannel).has(client.requiredVoicePermissions)) {
+                return interaction.reply({
+                    embeds: [new EmbedBuilder()
+                        .setDescription(`I don't have perm **[\`CONNECT\` or \`SPEAK\`]** to join voice!`)
+                        .setColor(client.config.embed.color)
+                        .setFooter({ text: client.config.embed.footer_text, iconURL: client.config.embed.footer_icon })]
+                });
+            }
+        }
+
+        if (!interaction.guild.members.me.permissions.has(client.requiredVoicePermissions)) {
+            return interaction.reply({
+                embeds: [new EmbedBuilder()
+                    .setDescription("I don't have perm `CONNECT` or `SPEAK` to execute command!")
+                    .setColor(client.config.embed.color)
+                    .setFooter({ text: client.config.embed.footer_text, iconURL: client.config.embed.footer_icon })]
+            });
+        }
+
+        if (onCoolDown(interaction, command)) {
+            return interaction.reply({
+                ephemeral: true,
+                embeds: [new EmbedBuilder()
+                    .setColor(client.config.embed.color)
+                    .setFooter({ text: client.config.embed.footer_text, iconURL: client.config.embed.footer_icon })
+                    .setDescription(`Tienes que esperar ${onCoolDown(interaction, command)} para usar el comando:**${command.name}** otra vez.`)
+                    .addFields([{ name: `¿Por qué hay un cooldown?`, value: `Nos disculpamos por eso, pero para que el bot funcione para todos los demás, debe esperar, para que otros usuarios puedan usar el bot sin ningún problema, Gracias por entender.` }])
+                ]
+            });
+        }
+
+        try {
+            client.stats.inc(interaction.guildId, "commands");
+            client.stats.inc("global", "commands");
+            await command.run(client, interaction, queue)
+        } catch (e) {
+            client.logger.error(`Algo salió mal al ejecutar un comando **[${e}]**`, { label: `interactionCreate` })
+            return interaction.reply({
+                embeds: [new EmbedBuilder()
+                    .setColor(client.config.embed.color)
+                    .setFooter({ text: client.config.embed.footer_text, iconURL: client.config.embed.footer_icon })
+                    .setDescription(`Hubo un error al ejecutar ese comando, informe eso en nuestro [support server](${client.config.support_server})`)], ephemeral: true
+            });
+        }
+    }
+}
